@@ -92963,7 +92963,7 @@ var render = function () {
                             _c("el-input", {
                               attrs: {
                                 size: "mini",
-                                placeholder: "Search Name Here",
+                                placeholder: "Search Employee Here",
                               },
                               model: {
                                 value: _vm.search,
