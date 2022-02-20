@@ -41,7 +41,7 @@ class EmployeesController extends Controller
     public function getEmployeeData(Request $request) 
     {
         try {
-            $query = Employee::select('name', 'department', 'section', 'email');
+            $query = Employee::select('name', 'id', 'department', 'section', 'email');
 
             if($request->searchQuery) {
                 $query->where(function($q) use ($request) {

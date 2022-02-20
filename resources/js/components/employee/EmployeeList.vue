@@ -25,7 +25,7 @@
                             </el-table-column>
                             <el-table-column align=right min-width="150">
                                 <template slot="header" slot-scope="scope">
-                                    <el-input v-model="search" size="mini" placeholder="Search Employee Here" />
+                                    <el-input v-model="search" size="mini" placeholder="Type Search Here" />
                                 </template>
                                 <template slot-scope="scope">
                                     <el-button size="mini" type="info" @click="showEmployee(scope.$index, scope.row)">Show
