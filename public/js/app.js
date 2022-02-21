@@ -7118,6 +7118,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'employee-form',
@@ -92913,19 +92918,31 @@ var render = function () {
               _vm._v(
                 "\n                    Employee Data\n                    "
               ),
-              _c(
-                "a",
-                { attrs: { href: "/add-employee" } },
-                [
-                  _c(
-                    "el-button",
-                    { staticClass: "float-right", attrs: { type: "success" } },
-                    [_vm._v("Add Employee")]
-                  ),
-                ],
-                1
-              ),
-            ]
+              _c("el-row", { staticClass: "float-right" }, [
+                _c(
+                  "a",
+                  { attrs: { href: "/add-employee" } },
+                  [
+                    _c("el-button", { attrs: { type: "success" } }, [
+                      _vm._v("Add Employee"),
+                    ]),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { attrs: { href: "/download-pdf" } },
+                  [
+                    _c("el-button", { attrs: { type: "primary" } }, [
+                      _vm._v("Download"),
+                    ]),
+                  ],
+                  1
+                ),
+              ]),
+            ],
+            1
           ),
           _vm._v(" "),
           _c(
@@ -92963,7 +92980,7 @@ var render = function () {
                             _c("el-input", {
                               attrs: {
                                 size: "mini",
-                                placeholder: "Type Search Here",
+                                placeholder: "Search Here",
                               },
                               model: {
                                 value: _vm.search,

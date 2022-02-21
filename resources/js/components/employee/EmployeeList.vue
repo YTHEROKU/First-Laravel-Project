@@ -4,9 +4,14 @@
             <el-card class="box-card">
                 <div slot="header" class="clearfix">
                     Employee Data
-                    <a href="/add-employee">
-                        <el-button type="success" class="float-right">Add Employee</el-button>
-                    </a>
+                    <el-row class="float-right">
+                        <a href="/add-employee">
+                            <el-button type="success">Add Employee</el-button>
+                        </a>
+                        <a href="/download-pdf">
+                            <el-button type="primary">Download</el-button>
+                        </a>
+                    </el-row>
                 </div>
                 <div>
                     <el-table
@@ -25,7 +30,7 @@
                             </el-table-column>
                             <el-table-column align=right min-width="150">
                                 <template slot="header" slot-scope="scope">
-                                    <el-input v-model="search" size="mini" placeholder="Type Search Here" />
+                                    <el-input v-model="search" size="mini" placeholder="Search Here" />
                                 </template>
                                 <template slot-scope="scope">
                                     <el-button size="mini" type="info" @click="showEmployee(scope.$index, scope.row)">Show

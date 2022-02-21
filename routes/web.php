@@ -40,6 +40,20 @@ Route::get('show-employee/{id}', [EmployeesController::class, 'show']);
 
 Route::delete('delete-employee/{id}', [EmployeesController::class, 'destroy']);
 
+Route::get('/download', function(){
+    $file = public_path()."/inputgroup.pdf";
+
+    $headers = array(
+        'Content-Type: application/pdf',
+    );
+
+    return Response::download($file, "Input Group.pdf", $headers);
+});
+
+Route::get('/download-pdf',[EmployeesController::class, 'downloadPDF']);
+
+Route::get('/get-all-employee',[EmployeesController::class, 'getAllEmployees']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

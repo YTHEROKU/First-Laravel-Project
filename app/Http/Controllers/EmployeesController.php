@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Exception;
 use App\Models\Employee;
+use PDF;
 
 class EmployeesController extends Controller
 {
@@ -121,6 +122,18 @@ class EmployeesController extends Controller
             dd($e);
         }
         
+    }
+
+    public function getAllEmployees() {
+        $employees = Employee::all();
+        return view('employee', compact('employees'));
+    }
+
+
+    public function downloadPDF() {
+        $employees = Employee::all();
+        $pdf = PDF::loadView('employee', compact('employees'));
+        return $pdf->download('employees.pdf');
     }
 
 }
